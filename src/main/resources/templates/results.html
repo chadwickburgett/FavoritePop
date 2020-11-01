@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>View All Flavors</title>
+</head>
+<body>
+<form>
+<table>
+<tr th:each="currentPop : ${pop}" >
+<td th:text="${currentPop.id}" />
+<td th:text="${currentPop.flavor}" />
+<td th:text="${currentPop.stars}" />
+<td th:text="${currentPop.user.firstName}" />
+<td th:text="${currentPop.user.lastName}" />
+<td th:text="${currentPop.user.age}" />
+<td><a th:href="@{/edit/{id}(id=${currentPop.id})}">Edit</a></td>
+<td><a th:href="@{/delete/{id}(id=${currentPop.id})}">Delete</a></td>
+</tr>
+</table>
+</form>
+<a href="../inputPop">Add a new Favorite Pop</a>
+</body>
+</html>

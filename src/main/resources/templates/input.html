@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert New Favorite Pop</title>
+</head>
+<body>
+<form th:object="${newPop}" th:action="@{/update/{id}(id=${newPop.id})}" method=POST>
+First Name: <input name="user.firstName" size="20" th:field="*{user.firstName}"> <br />
+Last Name: <input name="user.lastName" size="20" th:field="*{user.lastName}"> <br />
+Age: <input name="user.age" size="10" th:field="*{user.age}"><br />
+Flavor: <input name="flavor" size="20" th:field="*{flavor}"><br />
+Stars: <input name="stars" size="20" th:field="*{stars}"><br />
+<input name="submit" type="submit" value="submit" />
+</form>
+<a href="viewAll">View all Favorites</a>
+</body>
+</html>
