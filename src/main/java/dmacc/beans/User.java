@@ -1,7 +1,9 @@
 package dmacc.beans;
 
 import javax.persistence.Embeddable;
+import lombok.Data;
 
+@Data
 @Embeddable
 public class User {
 	private String firstName;
@@ -18,7 +20,7 @@ public class User {
 		this.age = age;
 	}
 
-	public String getFirstName() {
+	/*public String getFirstName() {
 		return firstName;
 	}
 
@@ -46,5 +48,5 @@ public class User {
 	public String toString() {
 		return "User [firstName=" + firstName + ", lastName="
 				+ lastName + ", age=" + age + "]";
-	}
+	}*/
 }
